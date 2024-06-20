@@ -1,0 +1,43 @@
+# Production datasource settings
+# Pastikan anda tahu apa yang anda ketik!
+quarkus:
+  datasource:
+    db-kind: mysql
+    username: username
+    password: password
+    jdbc:
+      url: jdbc:mysql://localhost:3306/your_database
+      min-size: 10
+      max-size: 20
+      initial-size: 10
+      acquire-increment: 5
+      leak-detection-interval: 2000
+      idle-removal-interval: 1800
+      max-lifetime: 1800000
+
+  # ORM settings
+  hibernate-orm:
+    database:
+      generation: update
+    dialect: org.hibernate.dialect.MySQLDialect
+    log:
+      sql: true
+    format-sql: true
+    mapping-files:
+      - META-INF/query-test.xml
+
+# Logging level
+log:
+  level: INFO
+
+# DokuPayment settings
+doku:
+  id-client:
+  key:
+    secret:
+
+# Midtrans settings
+midtrans:
+  key:
+    merchant:
+    secret:

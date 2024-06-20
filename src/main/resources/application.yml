@@ -1,0 +1,7 @@
+quarkus:
+  application:
+    name: QuarkusStarter
+  http:
+    port: 8084
+  profile: dev
+
